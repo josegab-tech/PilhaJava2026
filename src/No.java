@@ -17,4 +17,7 @@ public class No<T>{
         return proximo;
     }
 
+    public void setProximo(No<T> proximo){
+        this.proximo = proximo
+    }
 }
