@@ -13,12 +13,12 @@ public class PilhaEncadeada<T> implements Iterable<T> {
         return this.topo == null;
     }
 
-    public boolean push(T dado) {
+    public boolean push(T dado) { // o primeiro proximo sempre é null devido ao construtor
         No<T> novoNo = new No<T>(dado);
         novoNo.setProximo(this.topo);
         this.topo = novoNo;
         this.size++;
-        return true;
+        return true; 
     }
 
     public T pop() {

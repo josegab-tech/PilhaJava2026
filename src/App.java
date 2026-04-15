@@ -10,6 +10,7 @@ public class App {
         System.out.println("2. Remover elemento - Pop");
         System.out.println("3. Mostrar topo - Peek");
         System.out.println("4. Mostrar pilha");
+        System.out.println("5. Insert da morte");
         System.out.println("0. Sair");
         System.out.printf("Digite a opção desejada:");
         return leia.nextInt();
@@ -34,14 +35,16 @@ public class App {
                     else
                         System.out.println("Pilha cheia - Stack Overflow");
                     break;
+
                 case 2:
                     elemento = minhaPilha.pop();
                     if (elemento != null)
-                        System.out.println("Topo: " + elemento);
+                        System.out.println("Topo: " + elemento.getDescricao());
                     else {
                         System.out.println("Pilha vazia");
                     }
                     break;
+
                 case 3:
                     elemento = minhaPilha.peek();
                     if (elemento != null)
@@ -49,10 +52,21 @@ public class App {
                     else
                         System.out.println("Pilha vazia");
                     break;
+
                 case 4:
                     for (Processo s : minhaPilha)
                         System.out.println(s + "|");
                     break;
+
+                case 5:
+                    int count = 0;
+                    while(true){
+                        Processo p = new Processo("Crash", 123);
+                        count++;
+                        minhaPilha.push(p);
+                        System.out.println(count);
+                    }
+
                 case 0:
                     System.out.println("Saindo...");
                     break;

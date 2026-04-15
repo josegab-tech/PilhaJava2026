@@ -1,7 +1,7 @@
-public class No<T> {
+public class No<T> { 
 
     private T dado;
-    private No<T> proximo;
+    private No<T> proximo; // literalmente o próximo nó
 
     public No(T dado) {
         this.dado = dado;
